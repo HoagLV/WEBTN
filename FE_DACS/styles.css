@@ -1,0 +1,1075 @@
+/* Đảm bảo toàn bộ trang web có chiều cao tối thiểu bằng viewport */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Để phần container mở rộng và đẩy footer xuống dưới */
+.container {
+    flex: 1;
+    display: flex;
+    width: 89%;
+    max-width: 2000px;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+/* Căn nội dung bên trái */
+.left-content {
+    flex: 1;
+    text-align: left;
+}
+
+.logo {
+    font-size: 64px;
+    font-weight: bold;
+    color: #0073e6;
+}
+
+.description {
+    font-size: 24px;
+    margin: 12px 0;
+}
+
+.feature-item {
+    display: inline-block;
+    margin: 10px;
+    font-size: 20px;
+    color: #0073e6;
+    cursor: pointer;
+}
+
+/* Hộp đăng nhập */
+.auth-box {
+    width: 320px;
+    background: white;
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-right: 40px;
+}
+
+/* Nút đăng ký & đăng nhập */
+.auth-box button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: normal;
+    color: white;
+    transition: 0.3s ease-in-out;
+}
+
+.auth-box .register {
+    background-color: #E53935;
+}
+
+.auth-box .register:hover {
+    background-color: #C62828;
+}
+
+.auth-box .login {
+    background-color: #1E88E5;
+}
+
+.auth-box .login:hover {
+    background-color: #1565C0;
+}
+
+/* Phần ngôn ngữ */
+.language {
+    margin-top: 15px;
+    font-size: 14px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Đường phân cách giữa nội dung và footer */
+.footer-separator {
+    width: 100%;
+    height: 2px;
+    background-color: #ddd;
+    margin-top: 20px;
+}
+
+/* Định dạng footer */
+.footer {
+    background-color: #f8f8f8;
+    text-align: left;
+    padding: 20px 40px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+/* Đảm bảo footer luôn nằm dưới cùng */
+.footer-container {
+    width: 89%; /* Giới hạn chiều rộng */
+    max-width: 2000px; /* Không quá lớn */
+    margin: auto;
+}
+
+/* Cột bên trái */
+.footer-info {
+    flex: 5;
+    text-align: center; /* Căn giữa nội dung */
+    display: flex;
+    flex-direction: column;
+    align-items: right; /* Căn giữa theo chiều ngang */
+    justify-content: right; /* Căn giữa theo chiều dọc */
+}
+
+/* Cột bên phải (Mạng xã hội) */
+.footer-social {
+    flex: 1;
+    text-align: right;
+}
+
+/* Khoảng cách giữa các link */
+.footer-links a {
+    color: #0073e6;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Biểu tượng mạng xã hội */
+.footer-social a img {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+}
+
+/* Trang đăng ký - Sử dụng chung CSS với trang chủ */
+.register-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px); /* Chiều cao trừ phần header */
+    background-color: #f4f7fc;
+}
+
+/* Hộp đăng ký */
+.register-box {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+}
+
+/* Các lựa chọn đăng ký */
+.register-options {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+/* Ô chọn đăng ký */
+.register-option {
+    text-decoration: none; /* Bỏ gạch chân */
+    color: inherit;
+    flex: 1;
+    padding: 20px;
+    background: white;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.register-option:hover {
+    border-color: #0073e6;
+    box-shadow: 0 4px 10px rgba(0, 115, 230, 0.2);
+    
+}
+
+/* Icon */
+.register-option img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+/* Văn bản */
+.register-option p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Đăng ký tổ chức */
+.organization-register {
+    display: block;
+    margin-top: 15px;
+    font-size: 16px;
+    color: #0073e6;
+    text-decoration: none;
+}
+
+.organization-register:hover {
+    text-decoration: underline;
+}
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between; /* Đẩy header-left sang trái và header-right sang phải */
+    align-items: center;
+    padding: 10px 20px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 60px;
+}
+
+/* Header Left (Logo) */
+.header-left {
+    flex: 1; /* Chiếm toàn bộ phần bên trái */
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0073e6;
+    text-decoration: none;
+}
+.logo:hover {
+    color: #005bb5; /* Màu thay đổi khi hover */
+}
+
+/* Header Right (Chế độ tối + Cờ Việt Nam) */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Tạo khoảng cách giữa cờ và chế độ tối */
+}
+
+/* Cờ Việt Nam */
+.flag {
+    width: 24px;
+    height: 16px;
+}
+
+/* Chế độ tối */
+.dark-mode {
+    font-size: 16px;
+    cursor: pointer;
+    color: #333;
+}
+.register-container{
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    height: 100vh;
+}
+.register-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Căn giữa */
+}
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Khoảng cách giữa các input */
+}
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.register-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0073e6;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+.register-button:hover {
+    background-color: #005bb5;
+}
+.login-link {
+   
+    text-decoration: none;
+}
+
+/* Chế độ tối áp dụng cho toàn bộ trang */
+.dark-mode-active {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+/* Đảm bảo toàn bộ body và main cũng bị tối */
+.dark-mode-active body,
+.dark-mode-active .register-page {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+/* Đảm bảo header cũng chuyển sang chế độ tối */
+.dark-mode-active header {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+/* Đổi màu cho box đăng ký */
+.dark-mode-active .register-box {
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+/* Chỉnh màu cho input */
+.dark-mode-active input {
+    background-color: #444;
+    color: black;
+    border: 1px solid #888;
+}
+
+/* Chỉnh màu cho các lựa chọn */
+.dark-mode-active .register-option {
+    background-color: #555;
+    border-color: #777;
+}
+
+.dark-mode-active .register-option:hover {
+    border-color: #fff;
+}
+
+/* Chỉnh màu chữ của "Chế độ tối" */
+.dark-mode-active .dark-mode-toggle {
+    color: white;
+}
+
+/* Nút chuyển chế độ tối */
+.dark-mode-toggle {
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+.dark-mode-toggle:hover {
+    text-decoration: underline;
+}
+
+.dark-mode-active .footer {
+    background-color: #1a1a1a;
+    color: #ccc;
+}
+
+.dark-mode-active .footer-links a {
+    color: white;
+    text-decoration: none;
+    
+}
+
+.dark-mode-active .footer-links a:hover {
+    color: #0099ff;
+}
+
+.dark-mode-active .footer-info p,
+.dark-mode-active .footer-info ul {
+    color: #ccc;
+}
+
+.dark-mode-active .footer-social p {
+    color: #ddd;
+}
+
+/* Chỉnh lại icon mạng xã hội trong chế độ tối */
+.dark-mode-active .footer-social .social-icon {
+    filter: brightness(0.8);
+}
+
+.dark-mode-active .footer-social .social-icon:hover {
+    filter: brightness(1);
+}
+.dark-mode-active .auth-box {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+}
+
+/* Chế độ tối cho header */
+.dark-mode-active .dashboard-header {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+/* Sidebar */
+.dark-mode-active .sidebar {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+/* Logo */
+.dark-mode-active .logo {
+    color: #ffffff;
+}
+
+/* Box danh sách lớp */
+.dark-mode-active .dashboard-class-list-box {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    color: #ffffff;
+}
+
+/* Input tìm kiếm */
+.dark-mode-active .dashboard-search-input {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+/* Nút tìm giáo viên */
+.dark-mode-active .dashboard-find-teacher-button {
+    background-color:  #183693;
+    color: white;
+    border: 1px solid #666;
+}
+
+
+/* User info */
+.dark-mode-active .dashboard-user-info {
+    background-color: transparent;
+    color: white;
+}
+
+.dark-mode-active .dashboard-user-avatar {
+    background-color: #555;
+    color: white;
+}
+
+/* Dropdown menu user */
+.dark-mode-active .dashboard-user-dropdown {
+    background-color: #333;
+    border: 1px solid #555;
+}
+
+.dark-mode-active .dashboard-user-dropdown ul li a,
+.dark-mode-active .dashboard-user-dropdown ul li span {
+    color: white;
+}
+.dark-mode-active .dashboard-user-dropdown ul li:hover {
+    background-color: #333; /* Tối nền */
+    border-radius: 8px; 
+}
+.dark-mode-active .dashboard-user-dropdown ul li a:hover,
+.dark-mode-active .dashboard-user-dropdown ul li span:hover {
+    color: #ffffff;          /* Chữ sáng rõ */
+}
+.dark-mode-active .dashboard-user-name,
+.dark-mode-active .dashboard-user-role {
+    color: #ffffff; /* Màu trắng */
+}
+
+.dark-mode-active,
+.dark-mode-active body,
+.dark-mode-active .register-page {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+.dark-mode-active .container,
+.dark-mode-active .main-wrapper,
+.dark-mode-active .dashboard-container {
+    background-color: #1e1e1e;
+}
+.dark-mode-active .dashboard-header,
+.dark-mode-active .dashboard-sidebar {
+    background-color: #1a1a1a;
+    color: white;
+}
+.role-selection {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.role-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.role-option img {
+    width: 24px;
+    height: 24px;
+}
+
+.role-option.active {
+    color: #0033cc;
+    border-bottom: 3px solid #0033cc;
+    font-weight: bold;
+}
+
+.role-option:hover {
+    opacity: 0.8;
+}
+
+.login-link a{
+    text-decoration: none;
+    color: #0073e6;
+}
+.login-link a:hover {
+    text-decoration: none;
+    color: #0033cc; 
+}
+
+.dashboard-container {
+    width: 100%;
+    height: 100vh;
+    background: #f4f6f9;
+    display: flex;
+    overflow: hidden;
+}
+
+.dashboard-sidebar {
+    width: 60px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.dashboard-logo {
+    font-size: 30px;
+    color: white;
+}
+
+.dashboard-settings-icon {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.dashboard-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px -25px;
+    background-color: white;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    
+   
+}
+
+.dashboard-header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: auto;
+}
+.dashboard-user-info {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 10px;
+}
+.dashboard-user-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    display: none; /* Ẩn đi */
+    min-width: 150px;
+    z-index: 999;
+}
+
+.dashboard-user-dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 8px 0;
+}
+
+.dashboard-user-dropdown li {
+    padding: 10px 16px;
+}
+
+.dashboard-user-dropdown li:hover {
+    background-color: #f0f0f0;
+}
+
+.dashboard-user-dropdown a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+/* Hover effect */
+.dashboard-user-info:hover .dashboard-user-dropdown {
+    display: block;
+}
+.dashboard-user-avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+.dashboard-user-details {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+.dashboard-user-name {
+    font-size: 14px;
+    font-weight: bold;
+    color: #222;
+}
+
+.dashboard-user-role {
+    font-size: 12px;
+    color: gray;
+}
+
+.dashboard-flag-small {
+    width: 20px;
+    height: auto;
+}
+
+.dashboard-main-container {
+    flex: 1;
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    align-items: stretch; /* Đảm bảo các box con full height nếu cần */
+
+}
+.dashboard-class-list-box {
+    flex: 1; /* Chiếm hết phần còn lại */
+    width: 100%; /* Đảm bảo width */
+    background-color: #fff;
+    border: 5px solid #183693;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.dashboard-class-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dashboard-main-title {
+    margin: 0;
+    font-size: 24px;
+}
+
+.dashboard-search-box {
+    position: relative;
+    width: 40%;
+    max-width: 400px; /* hoặc 100% nếu muốn */
+    margin: 20px 0;
+}
+
+.dashboard-search-input {
+    padding: 6px 30px 6px 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 12px;
+}
+
+.dashboard-search-button {
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    pointer-events: none; /* Để click không bị vướng icon */
+}
+
+.dashboard-find-teacher-button {
+    padding: 10px 16px;
+    background-color: #183693;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.dashboard-find-teacher-button:hover {
+    background-color: #0f256b;
+}
+.dashboard-header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+    justify-content: flex-end;
+}
+
+.dashboard-settings-panel {
+    display: none;
+    position: absolute;
+    bottom: 60px;
+    left: 10px;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+/* .dashboard-settings-panel.active {
+    display: block;
+    opacity: 1;
+}
+
+.color-palette {
+    display: flex;
+    gap: 5px;
+}
+
+.color-option {
+    width: 25px;
+    height: 25px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+} */
+
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f8fd;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .account-settings-container {
+    display: flex;
+    padding: 20px;
+  }
+  
+  .account-sidebar {
+    width: 220px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-right: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  
+  .sidebar-title {
+    white-space: nowrap; /* Không cho xuống dòng */
+    font-weight: bold;
+    font-size: 18px;
+    color: #183693;
+  }
+  
+  .sidebar-menu {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar-item {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s;
+  }
+  
+  .sidebar-item.active {
+    background-color: #183693;
+    color: white;
+  }
+  
+
+  
+  .sidebar-item:hover:not(.active) {
+    background-color: #f0f0f0;
+  }
+  
+  .account-main-content {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .account-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .avatar-circle {
+    width: 80px;
+    height: 80px;
+    background-color: #d8d8d8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 20px;
+  }
+  
+  .upload-button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .upload-note {
+    font-size: 12px;
+    color: #666;
+  }
+  
+  .account-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 200px;
+  }
+  
+  .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="date"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  input[disabled] {
+    background-color: #f1f1f1;
+  }
+  
+  small {
+    font-size: 12px;
+    margin-top: 4px;
+    color: #007bff;
+  }
+  
+  small.error {
+    color: red;
+  }
+  
+  .gender-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .gender-group input {
+    margin-right: 4px;
+  }
+  
+  .update-button {
+    margin-top: 10px;
+    align-self: flex-end;
+    padding: 10px 20px;
+    background-color: #183693;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .update-button:hover {
+    background-color: #122f6e;
+  }
+  
+  .back-button {
+    background-color: transparent;
+    border: none;
+    color: #183693;
+    font-size: 14px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.3s;
+    text-decoration: none;
+  }
+  
+  .back-button:hover {
+    color: #122f6e;
+  }
+  
+
+  #password-box {
+    padding: 40px 60px;
+    border-radius: 12px;
+    background-color: #fff;
+    width: 100%;  /* Quan trọng: không cố định width nhỏ */
+    max-width: none; /* Bỏ giới hạn max-width */
+  }
+  
+  #password-box h3 {
+    color: #183693;
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+  
+  #password-box .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  #password-box label {
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  #password-box input[type="password"] {
+    padding: 12px 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    width: 300px;
+  }
+  
+  #password-box .form-actions {
+    margin-top: 20px;
+  }
+  
+  #password-box .update-button {
+    background-color: #183693;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #password-box .update-button:hover {
+    background-color: #122f6e;
+  }
+  
+  #password-box .back-button {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #183693;
+  }
+  
+  .password-wrapper {
+    position: relative;
+    width: 100%;
+  }
+  
+  .password-input {
+    width: 100%;
+    padding-right: 40px; /* Chừa khoảng trống cho icon */
+    box-sizing: border-box;
+  }
+  
+  .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 24px; 
+    text-align: center;
+    user-select: none;
+    font-size: 18px;
+    color: #888;
+  }
+

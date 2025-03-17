@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HoKoHa</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="dashboard-sidebar">
+            <a href="../Trangchu.html" class="logo">HKH</a>
+            
+            <div class="dashboard-settings-icon" onclick="toggleSettings()">⚙️</div>
+            <div class="dashboard-settings-panel" id="settingsPanel">
+                <label for="colorPicker">Chọn màu nền:</label>
+                <input type="color" id="colorPicker" onchange="changeBackgroundColor(this.value)">
+                <div class="color-palette">
+                    <button class="color-option" style="background-color: #ff5733;" onclick="changeBackgroundColor('#ff5733')"></button>
+                    <button class="color-option" style="background-color: #33ff57;" onclick="changeBackgroundColor('#33ff57')"></button>
+                    <button class="color-option" style="background-color: #3357ff;" onclick="changeBackgroundColor('#3357ff')"></button>
+                    <button class="color-option" style="background-color: #f1c40f;" onclick="changeBackgroundColor('#f1c40f')"></button>
+                    <button class="color-option" style="background-color: #9b59b6;" onclick="changeBackgroundColor('#9b59b6')"></button>
+                </div>
+            </div>
+        </aside>
+        
+        <div class="dashboard-content">
+            <!-- HEADER -->
+            <header class="dashboard-header">
+                <div class="dashboard-header-right">
+                    <img src="../image/covn.jpg" alt="Vietnam Flag" class="dashboard-flag-small">
+                    <span class="dashboard-notification-icon">🔔</span>
+                
+                    <div class="dashboard-user-info">
+                        <div class="dashboard-user-avatar">DH</div>
+                        <div class="dashboard-user-details">
+                            <span class="dashboard-user-name">Đào Trần Huy Hoàng</span><br>
+                            <span class="dashboard-user-role">Học sinh</span>
+                        </div>
+                    
+                        <!-- Dropdown menu -->
+                        <div class="dashboard-user-dropdown">
+                            <ul>
+                                <li><a href="TaiKhoan.html">Tài khoản</a></li>
+                                <li><span class="dark-mode">Chế độ tối 🌙</span></li>
+                                <li><a href="../Trangchu.html">Đăng xuất</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </header>
+        
+            <!-- MAIN: Danh sách lớp -->
+            <main class="dashboard-main-container">
+                <div class="dashboard-class-list-box">
+                    <div class="dashboard-class-list-header">
+                        <h2 class="dashboard-main-title">Danh sách lớp</h2>
+                        <button class="dashboard-find-teacher-button">+ Tìm giáo viên</button>
+                    </div>
+            
+                    <div class="dashboard-search-box">
+                        <input type="text" placeholder="Tìm kiếm theo tên lớp" class="dashboard-search-input">
+                        <button class="dashboard-search-button">🔍</button>
+                
+            </main>
+        </div>
+        
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>
